@@ -34,6 +34,10 @@ public class Post {
     @Column(nullable = false)
     private LocalDateTime createdAt;
     
+    @ElementCollection
+    @CollectionTable(name = "post_media_urls")
+    private List<String> mediaUrls = new ArrayList<>();
+    
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id", nullable = false)
     private User user;

@@ -4,6 +4,7 @@ import com.project.nesordular.model.Comment;
 import com.project.nesordular.repository.CommentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -30,6 +31,15 @@ public class CommentService {
                 .orElseThrow(() -> new RuntimeException("Comment not found with id: " + id));
     }
 
+    public List<Comment> getCommentsByPostId(Long postId) {
+        return commentRepository.findByPostId(postId);
+    }
+
+    public List<Comment> getCommentsByUserId(Long userId) {
+        return commentRepository.findByUserId(userId);
+    }
+
+    @Transactional
     public Comment updateComment(Long id, Comment commentDetails) {
         Comment comment = getCommentById(id);
         comment.setContent(commentDetails.getContent());

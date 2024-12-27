@@ -31,11 +31,17 @@ public class PostService {
                 .orElseThrow(() -> new RuntimeException("Post not found with id: " + id));
     }
 
+    public List<Post> getPostsByUserId(Long userId) {
+        return postRepository.findByUserId(userId);
+    }
+
+    @Transactional
     public Post updatePost(Long id, Post postDetails) {
         Post post = getPostById(id);
         post.setContent(postDetails.getContent());
         post.setAuthorName(postDetails.getAuthorName());
         post.setAnonymous(postDetails.isAnonymous());
+        post.setMediaUrls(postDetails.getMediaUrls());
         return postRepository.save(post);
     }
 

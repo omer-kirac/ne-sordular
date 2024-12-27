@@ -35,7 +35,6 @@ public class UserService {
 
     public User updateUser(Long id, User userDetails) {
         User user = getUserById(id);
-        user.setName(userDetails.getName());
         user.setEmail(userDetails.getEmail());
         user.setPassword(userDetails.getPassword());
         user.setRole(userDetails.getRole());
