@@ -40,7 +40,7 @@ Bu proje, Next.js 14 ve TypeScript kullanılarak geliştirilmiş bir topluluk pl
 1. Projeyi klonlayın:
 ```bash
 git clone https://github.com/omer-kirac/ne-sordular.git
-cd my-next-app
+cd frontend
 ```
 
 2. Bağımlılıkları yükleyin:

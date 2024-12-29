@@ -30,7 +30,7 @@ export default function RootLayout({
   };
 
   const navItems = [
-    { href: '/sorular', label: 'Sorular' },
+    { href: '/sorular', label: 'Topluluk' },
     { href: '/is-ilanlari', label: 'İş İlanları' },
     { href: '/sirketler', label: 'Şirketler' },
     { href: '/maaslar', label: 'Maaşlar' },
@@ -43,9 +43,9 @@ export default function RootLayout({
           <header className="bg-white border-b shadow-sm dark:bg-gray-800 dark:border-gray-700">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               <div className="flex justify-between items-center h-16">
-                {/* Logo placeholder */}
-                <Link href="/" className="w-40 h-8 bg-emerald-50 dark:bg-emerald-900/30 flex items-center justify-center rounded">
-                  <span className="text-emerald-600 dark:text-emerald-400 font-semibold">LOGO</span>
+                {/* Logo */}
+                <Link href="/sorular" className="text-xl font-bold text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 transition-colors">
+                  Ne Sordular?
                 </Link>
 
                 {/* Navigation */}
