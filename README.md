@@ -2,11 +2,6 @@
 
 Bu proje, kullanıcıların anonim olarak post paylaşabildiği, şirketler hakkında değerlendirme yapabildiği, mülakat deneyimlerini paylaşabildiği ve maaş bilgilerini paylaşabildiği bir platformdur.
 
-## Proje Yapısı
-
-- `/backend` - Spring Boot backend uygulaması
-- `/frontend` - Frontend uygulaması (Yakında eklenecek)
-
 ## Özellikler
 
 ### Post Sistemi
@@ -51,7 +46,7 @@ Bu proje, kullanıcıların anonim olarak post paylaşabildiği, şirketler hakk
 - Mülakat tarihi
 - Mülakat stilleri (Yüzyüze/Test/Teknik Test)
 
-## Backend Teknolojileri
+## Teknolojiler
 
 - Java 17
 - Spring Boot 3.4.1
@@ -60,11 +55,11 @@ Bu proje, kullanıcıların anonim olarak post paylaşabildiği, şirketler hakk
 - Spring Security
 - Lombok
 
-## Backend Kurulum
+## Kurulum
 
 1. Projeyi klonlayın:
 ```bash
-git clone https://github.com/omer-kirac/ne-sordular.git
+git clone https://github.com/omer-kirac/ne-sordular-.git
 ```
 
 2. MySQL veritabanını oluşturun:
@@ -72,16 +67,15 @@ git clone https://github.com/omer-kirac/ne-sordular.git
 CREATE DATABASE ne_sordular;
 ```
 
-3. `backend/.env` dosyası oluşturun ve gerekli değişkenleri ayarlayın:
+3. `.env` dosyası oluşturun ve gerekli değişkenleri ayarlayın:
 ```
 MYSQL_URL=jdbc:mysql://localhost:3306/ne_sordular?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
 MYSQL_USER=your_username
 MYSQL_PASSWORD=your_password
 ```
 
-4. Backend projesini çalıştırın:
+4. Projeyi çalıştırın:
 ```bash
-cd backend
 ./mvnw spring-boot:run
 ```
 
